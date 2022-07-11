@@ -1,16 +1,5 @@
 ## 01. Training
 
-
-```
-https://docs.google.com/spreadsheets/d/1oBrxSSVJLqSxSkC30FBFfpZ38H9Nc2dL5cEeFw6p7Ck/edit?usp=sharing
-https://bit.ly/3RnEdRE
-
-sfadmin/Tkatjd!12
-https://jn90843.ap-northeast-2.aws.snowflakecomputing.com/
-
--- github
-https://github.com/SeongjaeHuh/snowflake/blob/c055fc33fcdc4408beee1e311d12cf471c620777/97_lab_dev.md
-```
 ### 계정생성
 ```
 create user user100 password='abc123' default_role = sysadmin default_secondary_roles = ('ALL') must_change_password = true;
