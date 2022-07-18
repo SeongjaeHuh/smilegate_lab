@@ -161,11 +161,14 @@ USE SCHEMA SNOWFLAKE_SAMPLE_DATA.TPCH_SF100;
 ```
 SELECT MIN(l_orderkey), MAX(l_orderkey), COUNT(*) FROM lineitem;
 ```
-![image](https://user-images.githubusercontent.com/52474199/177480728-b91bd3ab-29fb-4380-b03f-64082534b856.png)
+![image](https://user-images.githubusercontent.com/52474199/179520076-0188fefd-bcea-44d8-b82e-f13223a292c2.png)
 
 -- 아래의 Result 나오는 Pane에서 Query ID 클릭 하여 Pofile 확인. 메타 데이터 cache 사용됨 확인
+![image](https://user-images.githubusercontent.com/52474199/179520112-5c318543-17e4-4c0c-90a1-d6bd426dbded.png)
+
 
 -- result cache 실습용. Cache_result 사용하지 않도록
+
 ```
 ALTER SESSION SET USE_CACHED_RESULT = FALSE;
 ```
@@ -208,7 +211,7 @@ and l_extendedprice <= 20000
 GROUP BY l_returnflag, l_linestatus
 ORDER BY l_returnflag, l_linestatus;
 ```
-![image](https://user-images.githubusercontent.com/52474199/177270492-bf7b17d8-45b3-45a9-8a54-0bec2da6f8bb.png)
+![image](https://user-images.githubusercontent.com/52474199/179521316-71cfa440-7a5d-4490-929e-48a6d9768b64.png)
 
 -- Query ID 눌러서 "Percentage Scanned from" 확인
 
@@ -243,6 +246,7 @@ SELECT c_customer_sk,
     ORDER BY ca_city, ca_state
     LIMIT 10;
 ```
+![image](https://user-images.githubusercontent.com/52474199/179523774-15b27c03-3609-499c-bcdb-037f1b485491.png)
 
 --   LIMIT있는 동일한 쿼리 실제 실행:
 ```
@@ -257,6 +261,10 @@ SELECT c_customer_sk,
     ORDER BY ca_city, ca_state
     LIMIT 10;
 ```
+![image](https://user-images.githubusercontent.com/52474199/179524378-a7a54c27-2365-4656-9c32-f474b086b951.png)
+![image](https://user-images.githubusercontent.com/52474199/179524413-65d2685f-a3f1-42cb-88f9-0fdeb471e72e.png)
+
+
 --   LIMIT 없는 쿼리 explain plan :
 
 ```
@@ -271,11 +279,13 @@ SELECT c_customer_sk,
     AND c_customer_sk between 100000 and 600000
     ORDER BY ca_city, ca_state;
 ```
+![image](https://user-images.githubusercontent.com/52474199/179524929-ec72ee5c-81ea-4064-a71c-7bb40dceca19.png)
 
 -- query ID 클릭으로 detail page 탐색
 -- history tab에서 결과 확인
 -- 본인 user_id로 필터 걸어서 결과 확인
 
+![image](https://user-images.githubusercontent.com/52474199/179525226-32113128-59e7-48c5-b89e-d6eb8a159942.png)
 
 --   위와 동일한 쿼리 실행 :    
 ```
@@ -289,6 +299,7 @@ SELECT c_customer_sk,
     AND c_customer_sk between 100000 and 600000
     ORDER BY ca_city, ca_state;    
 ```
+![image](https://user-images.githubusercontent.com/52474199/179525303-038b2363-32bb-410d-b7af-4107f90ec3c3.png)
 
 ## 4. LAB. FUNCTION
 
