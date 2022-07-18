@@ -195,9 +195,10 @@ WHERE l_shipdate <= dateadd(day, 90, to_date('1998-12-01'))
 GROUP BY l_returnflag, l_linestatus
 ORDER BY l_returnflag, l_linestatus;
 ```
-![image](https://user-images.githubusercontent.com/52474199/177269953-2812941b-59e1-41c1-880a-ee15f63bc3f6.png)
-
 -- Query ID눌러서 Profile에서 "Percentage Scanned from" 확인
+
+![image](https://user-images.githubusercontent.com/52474199/179536273-9857be75-610e-4f9f-a968-ff1a8f5b7b4f.png)
+
 
 -- WHERE만 조금 바뀐 바뀐 유사한 쿼리 실행.
 ```
@@ -216,9 +217,9 @@ and l_extendedprice <= 20000
 GROUP BY l_returnflag, l_linestatus
 ORDER BY l_returnflag, l_linestatus;
 ```
-![image](https://user-images.githubusercontent.com/52474199/179521316-71cfa440-7a5d-4490-929e-48a6d9768b64.png)
-
 -- Query ID 눌러서 "Percentage Scanned from" 확인
+
+![image](https://user-images.githubusercontent.com/52474199/179536568-9f2b74dc-1da0-4700-8217-5a023853efc1.png)
 
 
 -- warehouse 종료
