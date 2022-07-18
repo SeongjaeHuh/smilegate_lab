@@ -121,7 +121,7 @@ ALTER WAREHOUSE [username]_WH SUSPEND; /*RESUME (시작)*/
 use warehouse [username]_wh; -- 생성한 웨어하우스 입력
 
 CREATE DATABASE [username]_vege_DB;
-use schema "[username]"."PUBLIC";
+--use schema "[username]_vege_DB"."PUBLIC";
 
 create table vegetable_details_sfuser
 (
@@ -141,6 +141,11 @@ plant_name varchar(25)
 
 ![image](https://user-images.githubusercontent.com/52474199/177914597-213f9646-56a0-47e2-ba4d-31f8a334d49e.png)
 
+![image](https://user-images.githubusercontent.com/52474199/179532848-0215899f-067e-4193-8903-2fd36773f1e0.png)
+
+![image](https://user-images.githubusercontent.com/52474199/179532930-84c52c23-689c-4610-877a-a16188f6c79c.png)
+
+![image](https://user-images.githubusercontent.com/52474199/179532976-2156b50a-9485-4eee-b734-a7c39864020d.png)
 
 
 ![image](https://user-images.githubusercontent.com/52474199/177914907-fd64dac4-e92d-4c02-a565-7b2571c81a8d.png)
